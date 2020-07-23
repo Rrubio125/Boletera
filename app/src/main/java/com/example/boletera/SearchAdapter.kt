@@ -5,13 +5,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
-class SearchAdapter (private val items:ArrayList<Categories>, private val onItemClick:(Categories) -> Unit ): RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class SearchAdapter(
+    private val items: ArrayList<EventCategory>,
+    private val onItemClick: (String) -> Unit
+) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view:View = LayoutInflater.from(parent.context).inflate(R.layout.category, parent, false)
-        return ViewHolder(View)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.category, parent, false)
+        return ViewHolder(view)
     }
 
     override fun getItemCount(): Int {
@@ -19,26 +24,28 @@ class SearchAdapter (private val items:ArrayList<Categories>, private val onItem
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val item: Categories = items[position]
-        when(holder) {
+        val item: EventCategory = items[position]
+        when (holder) {
             is ViewHolder -> {
                 holder.bind(item)
-                holder.itemView.setOnClickListener{
-                    onItemClick(item)
+                holder.itemView.setOnClickListener {
+                    onItemClick(item.getNameForCategory(it.context))
                 }
 
             }
         }
     }
 
-    class ViewHolder (view: View): RecyclerView.ViewHolder(view){
-        private var categories : TextView = view.findViewById(R.id.tv_categories)
-        private var logo: ImageView = view.findViewById(R.id.iv_logo)
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        private var categoriesTextView: TextView = view.findViewById(R.id.tv_category_name)
+        private var iconImageView: ImageView = view.findViewById(R.id.iv_category_icon)
+        private var cardLayout: ConstraintLayout = view.findViewById(R.id.category_background)
 
-        fun bind(item: Categories){
-            //picture.setImageResource(item.picture)
-            categories.text = item.categories
-            //logo.text = item.description
+        fun bind(item: EventCategory) {
+            categoriesTextView.text = item.getNameForCategory(categoriesTextView.context)
+            Glide.with(iconImageView.context).load(item.getIconResourceForCategory())
+                .into(iconImageView)
+            cardLayout.setBackgroundColor(item.getColorForCategory())
         }
 
     }
