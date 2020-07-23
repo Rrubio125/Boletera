@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Event Categories -->
+    <string name="cultural">cultural</string>
+    <string name="sport">sports</string>
+    <string name="festival">festival</string>
+    <string name="concert">concert</string>
+    <string name="taller">workshop</string>
+    <string name="conference">conference</string>
+</resources>
