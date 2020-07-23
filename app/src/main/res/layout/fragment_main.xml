@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorWhite">
+
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="84dp"
+            android:layout_height="32dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/logo"/>
+        
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tune"
+            android:layout_marginVertical="12dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_notification"
+            android:tint="@color/colorOrange"/>
+
+        <ImageView
+            android:id="@+id/tune"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_tune"
+            android:tint="@color/colorBoletera_btn"
+            android:layout_marginEnd="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/concert"
+        android:background="@drawable/background_concert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/name"
+            android:textColor="@color/colorOrange"
+            style="@style/bigText"/>
+
+        <TextView
+            android:id="@+id/whats_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/whats_next"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/normalText"
+            android:textColor="@color/colorWhite"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/day1"
+            android:layout_width="40dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/whats_next"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/round_shape">
+
+            <TextView
+                android:id="@+id/day1_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textSize="24sp"
+                android:textColor="@color/colorOrange"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/day1_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day1"
+                style="@style/xsmallText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/day2"
+            android:layout_width="40dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/whats_next"
+            app:layout_constraintStart_toEndOf="@id/day1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/round_shape">
+
+            <TextView
+                android:id="@+id/day2_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textSize="24sp"
+                android:textColor="@color/colorOrange"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/day2_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day2"
+                style="@style/xsmallText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/day3"
+            android:layout_width="40dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/whats_next"
+            app:layout_constraintStart_toEndOf="@id/day2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/round_shape">
+
+            <TextView
+                android:id="@+id/day3_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textSize="24sp"
+                android:textColor="@color/colorOrange"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/day3_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day3"
+                style="@style/xsmallText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/day4"
+            android:layout_width="40dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/whats_next"
+            app:layout_constraintStart_toEndOf="@id/day3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/round_shape">
+
+            <TextView
+                android:id="@+id/day4_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textSize="24sp"
+                android:textColor="@color/colorOrange"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/day4_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day4"
+                style="@style/xsmallText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/day5"
+            android:layout_width="40dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/whats_next"
+            app:layout_constraintStart_toEndOf="@id/day4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/round_shape">
+
+            <TextView
+                android:id="@+id/day5_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textSize="24sp"
+                android:textColor="@color/colorOrange"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/day5_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day5"
+                style="@style/xsmallText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/day6"
+            android:layout_width="40dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/whats_next"
+            app:layout_constraintStart_toEndOf="@id/day5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/day7"
+            android:background="@drawable/round_shape">
+
+            <TextView
+                android:id="@+id/day6_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textSize="24sp"
+                android:textColor="@color/colorOrange"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/day6_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day6"
+                style="@style/xsmallText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/day7"
+            android:layout_width="40dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintTop_toBottomOf="@id/whats_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round_shape">
+
+            <TextView
+                android:id="@+id/day7_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textSize="24sp"
+                android:textColor="@color/colorOrange"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/day7_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day7"
+                style="@style/xsmallText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/concert"
+        app:layout_constraintStart_toStartOf="parent">
+        
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:tint="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="17dp"/>
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:tint="@color/colorBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="17dp"/>
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cultural"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginVertical="16.89dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+            
+            <ImageView
+                android:id="@+id/ic_theather"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="22.27dp"
+                android:layout_height="21.7dp"
+                android:src="@drawable/ic_theaters"
+                android:tint="@color/colorBoletera_btn"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/ic_theather"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                style="@style/xsmallText"
+                android:text="@string/cultural"
+                android:textSize="8sp"/>
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cultural"
+            app:layout_constraintEnd_toStartOf="@id/festival"
+            android:layout_marginVertical="16.89dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_bike"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="22.27dp"
+                android:layout_height="21.7dp"
+                android:src="@drawable/ic_bike"
+                android:tint="@color/colorOrange"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/ic_bike"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                style="@style/xsmallText"
+                android:text="@string/sport"
+                android:textSize="8sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/festival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cultural"
+            app:layout_constraintEnd_toStartOf="@id/taller"
+            android:layout_marginVertical="16.89dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_flower"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="22.27dp"
+                android:layout_height="21.7dp"
+                android:src="@drawable/ic_flower"
+                android:tint="@color/colorYellow"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/ic_flower"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                style="@style/xsmallText"
+                android:text="@string/festival"
+                android:textSize="8sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/concert_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16.89dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/taller"
+            app:layout_constraintHorizontal_bias=".50"
+            app:layout_constraintStart_toEndOf="@id/festival"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_concert"
+                android:layout_width="22.27dp"
+                android:layout_height="21.7dp"
+                android:src="@drawable/ic_music"
+                android:tint="@color/colorPurple"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/xsmallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/concert"
+                android:textAllCaps="true"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ic_concert" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/taller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="40dp"
+            android:layout_marginVertical="16.89dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_taller"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="22.27dp"
+                android:layout_height="21.7dp"
+                android:src="@drawable/ic_star"
+                android:tint="@color/colorStar"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/ic_taller"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                style="@style/xsmallText"
+                android:text="@string/concert"
+                android:textSize="8sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/next_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/scroll"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

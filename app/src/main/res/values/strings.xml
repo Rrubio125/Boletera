@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Boletera</string>
+    <string name="just_name">Ricardo</string>
+    <string name="title_home">Home</string>
+    <string name="title_user">User</string>
+    <string name="title_calendar">Calendar</string>
+    <string name="tittle_search">Search</string>
+    <string name="name">Hola Ricardo!</string>
+    <string name="whats_next">Exploremos lo que sucedera cerca</string>
+    <string name="categories">Categorias principales</string>
+    <string name="day1">lu</string>
+    <string name="day2">ma</string>
+    <string name="day3">mi</string>
+    <string name="day4">ju</string>
+    <string name="day5">vi</string>
+    <string name="day6">sa</string>
+    <string name="day7">do</string>
+    <string name="cultural">cultural</string>
+    <string name="sport">deportivo</string>
+    <string name="festival">festival</string>
+    <string name="concert">concierto</string>
+    <string name="taller">talleres</string>
+    <string name="conference">confere</string>
+    <string name="top_event">Eventos populares</string>
+    <string name="search">Buscar por evento, artista, lugar</string>
+    <string name="title_1">Imagine Dragons</string>
+    <string name="title_2">La casa de bernarda alba</string>
+    <string name="title_3">Color Festival</string>
+    <string name="title_4">The Cure</string>
+    <string name="description_1">Imagine dragons \nEl #evolveworldtour llega a México</string>
+    <string name="description_2">Una representación de dolor cotidiano, familiar que \ntranstorna el reposo del espectador</string>
+    <string name="description_3">Concierto de música electrónica y colores más esperado, \npresentando a los mejores DJ nacionales e Internacionales</string>
+    <string name="description_4">The cure celebra su 40 aniversario como banda y el 30 \naniversario del álbum desintegration, pronto en México</string>
+
+
+
+</resources>
